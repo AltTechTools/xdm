@@ -1,0 +1,106 @@
+Xcursor.theme: whiteglass
+
+xlogin*login.translations: #override \
+	Ctrl<Key>R: abort-display()\n\
+	<Key>F1: set-session-argument(failsafe) finish-field()\n\
+	<Key>Delete: delete-character()\n\
+	<Key>Left: move-backward-character()\n\
+	<Key>Right: move-forward-character()\n\
+	<Key>Home: move-to-begining()\n\
+	<Key>End: move-to-end()\n\
+	Ctrl<Key>KP_Enter: set-session-argument(failsafe) finish-field()\n\
+	<Key>KP_Enter: set-session-argument() finish-field()\n\
+	Ctrl<Key>Return: set-session-argument(failsafe) finish-field()\n\
+	<Key>Return: set-session-argument() finish-field()
+
+! prompts
+Xlogin*titleMessage:     Xlogin
+xlogin*greeting:         Welcome to DeezNuts
+xlogin*namePrompt:       Username:\040
+xlogin*passwdPrompt:     Password:\040
+xlogin*fail:             -- Permission Denied --
+
+!xlogin*greeting: Welcome to CLIENTHOST
+!xlogin*namePrompt: \040\040\040\040\040\040\040Login:
+!xlogin*fail: Login incorrect or forbidden by policy
+
+#if WIDTH > 800
+xlogin*greetFont: -adobe-helvetica-bold-o-normal--24-240-75-75-p-138-iso8859-1
+xlogin*font: -adobe-helvetica-medium-r-normal--18-180-75-75-p-98-iso8859-1
+xlogin*promptFont: -adobe-helvetica-bold-r-normal--18-180-75-75-p-103-iso8859-1
+xlogin*failFont: -adobe-helvetica-bold-r-normal--18-180-75-75-p-103-iso8859-1
+xlogin*greetFace:	Serif-24:bold:italic
+xlogin*face: 		Helvetica-18
+xlogin*promptFace: 	Helvetica-18:bold
+xlogin*failFace: 	Helvetica-18:bold
+#else
+xlogin*greetFont: -adobe-helvetica-bold-o-normal--17-120-100-100-p-92-iso8859-1
+xlogin*font: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xlogin*promptFont: -adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1
+xlogin*failFont: -adobe-helvetica-bold-o-normal--14-140-75-75-p-82-iso8859-1
+xlogin*greetFace:	Serif-18:bold:italic
+xlogin*face:		Helvetica-12
+xlogin*promptFace:	Helvetica-12:bold
+xlogin*failFace:	Helvetica-14:bold
+#endif
+
+#ifdef COLOR
+xlogin*shdColor: grey30
+xlogin*hiColor: grey90
+xlogin*inpColor: grey80
+!*Foreground: black
+!*Background: #fffff0
+! colors
+xlogin*background:  white
+xlogin*foreground:  darkgray
+xlogin*greetColor:  darkgray
+xlogin*promptColor: darkgray
+xlogin*failColor:   red
+
+#else
+xlogin*shdColor: black
+xlogin*hiColor: black
+#endif
+
+! position
+xlogin.geometry: 645x300+180+10
+! shape
+xlogin*borderWidth:      0
+xlogin*frameWidth:       0
+xlogin*innerFramesWidth: 0
+
+
+! xmessage resources
+! ==================
+
+Xmessage*geometry:              150x30+800+820
+Xmessage*background:            white
+Xmessage*foreground:            darkgrey
+Xmessage*Font:                  -adobe-helvetica-bold-o-normal--17-120-100-100-p-92-iso8859-1
+!-microsoft-comic sans ms-medium-r-normal--16-*-100-100-p-*-iso8859-15
+Xmessage*borderWidth:           0
+
+Xmessage*message.scrollVertical:        Never
+Xmessage*message.scrollHorizontal:      Never
+
+Xmessage*Text*background:       white
+Xmessage*Text*foreground:       darkgrey
+Xmessage*Text.borderColor:      white
+Xmessage*Text.borderWidth:      0
+Xmessage*Text*font:             -adobe-helvetica-bold-o-normal--17-120-100-100-p-92-iso8859-1
+!-microsoft-comic sans ms-medium-r-normal--16-*-100-100-p-*-iso8859-15
+
+
+
+XConsole.text.geometry:	480x130
+XConsole.verbose:	true
+XConsole*iconic:	true
+XConsole*font:		fixed
+
+Chooser*geometry:		700x500+300+200
+Chooser*allowShellResize:	false
+Chooser*viewport.forceBars:	true
+Chooser*label.font:		*-new century schoolbook-bold-i-normal-*-240-*
+Chooser*label.label:		XDMCP Host Menu from CLIENTHOST
+Chooser*list.font:		-*-*-medium-r-normal-*-*-230-*-*-c-*-iso8859-1
+Chooser*Command.font:		*-new century schoolbook-bold-r-normal-*-180-*

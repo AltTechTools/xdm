@@ -1,0 +1,23 @@
+#!/bin/sh
+xloadimage -onroot -quiet -fullscreen /etc/X11/xdm/custom/bg.jpg
+setxkbmap ch
+#svkbd-ch-android 
+#svkbd-ch-android -g 480x260-0-0 &
+/usr/local/bin/svkbd-ch-android -d &
+#xconsole -geometry 480x130-0-0 -daemon -notify -verbose -fn fixed -exitOnFail
+
+#--- log messages in background
+root-tail -f -geometry 500x150-10+10 -fn fixed /var/log/messages,purple
+
+#--- set Shutdown/Reboot buttons
+(
+xmessage -buttons Shutdown:20,Reboot:21 "" ;
+case $? in
+ 20)
+ exec /sbin/poweroff;;
+ 21)
+ exec /sbin/reboot;;
+ *)
+ echo "Xmessage closed on `date`";;
+esac
+)&
